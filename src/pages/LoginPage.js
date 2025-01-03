@@ -12,12 +12,14 @@ const LoginPage = ({ onLogin }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/users/token/", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://sales-project-446523.ue.r.appspot.com/users/token/",
+        {
+          username,
+          password,
+        }
+      );
       const { access_token } = response.data;
-      console.log("token", access_token);
 
       // Set access token in session storage
       sessionStorage.setItem("access_token", access_token);

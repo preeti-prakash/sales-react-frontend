@@ -7,7 +7,7 @@ const OrderDetails = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/orders/details")
+      .get("https://sales-project-446523.ue.r.appspot.com/orders/details")
       .then((response) => {
         // Assuming response.data.data contains the array of order details
         setOrderDetails(response.data.data);

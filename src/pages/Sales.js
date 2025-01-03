@@ -7,7 +7,7 @@ const Sales = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/sales/")
+      .get("https://sales-project-446523.ue.r.appspot.com/sales/")
       .then((response) => setSalesData(response.data))
       .catch((error) => console.error("Error fetching sales data:", error));
   }, []);

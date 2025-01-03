@@ -53,7 +53,10 @@ const RegistrationForm = () => {
       return;
     }
     try {
-      await axios.post("http://localhost:8000/users/register/", formData);
+      await axios.post(
+        "https://sales-project-446523.ue.r.appspot.com/users/register/",
+        formData
+      );
       setSuccess(true);
       setError(null);
       setTimeout(() => navigate("/login"), 2000); // Redirect to login page after 2 seconds

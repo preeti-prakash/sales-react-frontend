@@ -7,7 +7,7 @@ const OrderDetailsPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/orders/")
+      .get("https://sales-project-446523.ue.r.appspot.com/orders/")
       .then((response) => setOrders(response.data))
       .catch((error) => console.error("Error fetching order details:", error));
   }, []);
